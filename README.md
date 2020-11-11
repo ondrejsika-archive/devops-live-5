@@ -14,10 +14,48 @@
 ## Agenda
 
 - Multiple Kubernetes Clusters
+- Include
 - Child Pipelines
 - Generated Pipelines
 - Multi Project Pipelines
 - DAG & Needs
+
+### Includes
+
+[Docs](https://docs.gitlab.com/ee/ci/yaml/#include)
+
+```yaml
+# .gitlab-ci.yml
+
+include:
+  - ci/core.yml
+  - ci/build.yml
+  - ci/deploy.yml
+```
+
+```yaml
+# ci/core.yml
+
+stages:
+  - build
+  - deploy
+```
+
+```yaml
+# ci/build.yml
+
+build:
+  stage: build
+  script: echo build
+```
+
+```yaml
+# ci/deploy.yml
+
+deploy:
+  stage: deploy
+  script: echo deploy
+```
 
 ## Child Pipelines
 
