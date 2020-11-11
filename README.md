@@ -133,3 +133,68 @@ with open(".gitlab-ci.generated.yml", "w") as f:
         pipeline.update(make_service(service))
     f.write(json.dumps(pipeline))
 ```
+
+### Needs, Directed Acyclic Graph
+
+- [Docs (DAG)](https://docs.gitlab.com/ee/ci/directed_acyclic_graph/index.html)
+- [Docs (Needs)](https://docs.gitlab.com/ee/ci/yaml/#needs)
+
+```yaml
+# .gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - deploy
+
+linux build:
+  stage: build
+  script: sleep 10 && echo Done
+
+mac build:
+  stage: build
+  script: sleep 20 && echo Done
+
+lint:
+  stage: test
+  needs: []
+  script: echo Done
+
+linux unit tests:
+  stage: test
+  needs:
+    - linux build
+  script: echo Done
+
+linux e2e tests:
+  stage: test
+  needs:
+    - linux build
+  script: sleep 10 && echo Done
+
+mac unit tests:
+  stage: test
+  needs:
+    - mac build
+  script: sleep 5 && echo Done
+
+mac e2e tests:
+  stage: test
+  needs:
+    - mac build
+  script: sleep 30 && echo Done
+
+release linux:
+  stage: deploy
+  script: "echo Done"
+  needs:
+    - linux unit tests
+    - linux e2e tests
+
+release mac:
+  stage: deploy
+  script: "echo Done"
+  needs:
+    - mac unit tests
+    - mac e2e tests
+```
