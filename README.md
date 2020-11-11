@@ -21,6 +21,12 @@
 - Multi Project Pipelines
 - DAG & Needs
 
+## Demo Gitlab
+
+- Gitlab - <https://gitlab.sikademo.com>
+- User - `demo`
+- Password - `asdfasdf`
+
 ## Includes
 
 [Docs](https://docs.gitlab.com/ee/ci/yaml/#include)
