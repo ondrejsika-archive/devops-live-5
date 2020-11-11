@@ -134,6 +134,29 @@ with open(".gitlab-ci.generated.yml", "w") as f:
     f.write(json.dumps(pipeline))
 ```
 
+## Multi Project Pipelines
+
+[Docs](https://docs.gitlab.com/ce/ci/multi_project_pipelines.html)
+
+#### example/lib
+
+```yaml
+# .gitlab-ci.yml (lib)
+job:
+  script: Do something
+
+triger-pipelines:
+  trigger: example/app
+```
+
+#### example/app
+
+```yaml
+# .gitlab-ci.yml (app)
+job:
+  script: Do something
+```
+
 ### Needs, Directed Acyclic Graph
 
 - [Docs (DAG)](https://docs.gitlab.com/ee/ci/directed_acyclic_graph/index.html)
