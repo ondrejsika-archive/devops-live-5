@@ -14,6 +14,7 @@
 ## Agenda
 
 - Multiple Kubernetes Clusters
+- Package Registries
 - Include
 - Child Pipelines
 - Generated Pipelines
