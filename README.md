@@ -21,7 +21,7 @@
 - Multi Project Pipelines
 - DAG & Needs
 
-### Includes
+## Includes
 
 [Docs](https://docs.gitlab.com/ee/ci/yaml/#include)
 
