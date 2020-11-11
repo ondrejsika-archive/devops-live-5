@@ -3,6 +3,7 @@
 ## Training
 
 - Gitlab CI - https://ondrej-sika.cz/skoleni/gitlab-ci
+- Kubernetes - https://ondrej-sika.cz/skoleni/kubernetes
 - Terraform - https://ondrej-sika.cz/skoleni/terraform
 
 ## Repositories
