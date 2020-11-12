@@ -12,6 +12,16 @@
 - Setup of Gitlab Runner in Docker - https://github.com/ondrejsika/ondrejsika-gitlab-runner
 - Setup of Kubernetes Cluster using Terraform - https://github.com/ondrejsika/terraform-do-kubernetes-example
 
+Examples from live stream
+
+- https://github.com/devops-live-examples/devopslive5-k8s
+- https://github.com/devops-live-examples/devopslive5-include
+- https://github.com/devops-live-examples/devopslive5-child-pipelines
+- https://github.com/devops-live-examples/devopslive5-genereted-pipeline
+- https://github.com/devops-live-examples/devopslive5-lib
+- https://github.com/devops-live-examples/devopslive5-app
+- https://github.com/devops-live-examples/devopslive5-needs
+
 ## Agenda
 
 - Multiple Kubernetes Clusters
